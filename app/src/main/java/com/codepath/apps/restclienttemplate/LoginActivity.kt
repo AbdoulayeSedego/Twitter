@@ -22,7 +22,7 @@ class LoginActivity : OAuthLoginActionBarActivity<TwitterClient>() {
         sampleModelDao = (applicationContext as TwitterApplication).myDatabase?.sampleModelDao()
         AsyncTask.execute { sampleModelDao?.insertModel(sampleModel) }
     }
-    
+
 
     // Inflate the menu; this adds items to the action bar if it is present.
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
