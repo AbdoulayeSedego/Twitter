@@ -45,7 +45,7 @@ class TimelineActivity : AppCompatActivity() {
 
             android.R.color.holo_orange_light,
 
-            android.R.color.holo_red_light);
+            android.R.color.holo_red_light)
 
         rvTweets = findViewById(R.id.rvTweets)
         adapter = TweetsAdapter(tweets)
@@ -58,6 +58,12 @@ class TimelineActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
+
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setLogo(R.drawable.twitter)
+        supportActionBar?.setDisplayUseLogoEnabled(true)
+        supportActionBar?.title = ""
+
         return true
     }
 // Excecuted when a user click on the item on menu
@@ -100,7 +106,7 @@ class TimelineActivity : AppCompatActivity() {
                     adapter.notifyDataSetChanged()
 
                     // Now we call setRefreshing(false) to signal refresh has finished
-                    swipeContainer.setRefreshing(false)
+                    swipeContainer.isRefreshing = false
                 }
                 catch (e: JSONException) {
                     Log.e(TAG,"JSON Exception $e")
