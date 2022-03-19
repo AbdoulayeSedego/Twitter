@@ -3,6 +3,8 @@ package com.codepath.apps.restclienttemplate
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -27,7 +29,6 @@ class ComposeActivity : AppCompatActivity() {
 
         client = TwitterApplication.getRestClient(this)
 
-
         btnTweet.setOnClickListener{
 //            1- get the data from the input field
             val tweetContent = etCompose.text.toString()
@@ -40,7 +41,7 @@ class ComposeActivity : AppCompatActivity() {
                 Toast.makeText(this, "Tweet is too long!, limit is 140 characters", Toast.LENGTH_SHORT).show()
             }
             else {
-//                4- TODO Make the Api call
+//
                 client.publishTweet(tweetContent, object : JsonHttpResponseHandler() {
 
                     override fun onSuccess(statusCode: Int, headers: Headers?, json: JSON) {

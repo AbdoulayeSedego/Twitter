@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/twitter"
+        android:gravity="left"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"/>
+
+
+
+</RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

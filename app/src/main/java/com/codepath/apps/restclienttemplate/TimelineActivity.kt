@@ -13,6 +13,8 @@ import com.codepath.apps.restclienttemplate.models.Tweet
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
 import org.json.JSONException
+import androidx.appcompat.widget.Toolbar
+
 
 class TimelineActivity : AppCompatActivity() {
 
@@ -29,6 +31,7 @@ class TimelineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timeline)
+
 
         client = TwitterApplication.getRestClient(this)
 
@@ -59,10 +62,10 @@ class TimelineActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
 
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setLogo(R.drawable.twitter)
-        supportActionBar?.setDisplayUseLogoEnabled(true)
-        supportActionBar?.title = ""
+//        supportActionBar?.setDisplayShowHomeEnabled(true)
+//        supportActionBar?.setLogo(R.drawable.twitter)
+//        supportActionBar?.setDisplayUseLogoEnabled(true)
+//        supportActionBar?.title = ""
 
         return true
     }

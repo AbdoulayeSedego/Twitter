@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="end"
+    android:layoutDirection="rtl"
+    android:layout_gravity="end">
 
 <!--    <item-->
 <!--        android:id="@+id/twitterIcon"-->
 <!--        android:title="Twitter-Icon"-->
 <!--        app:showAsAction="always"-->
-<!--        android:icon="@drawable/twitter"/>-->
+<!--        android:icon="@drawable/twitter"-->
+<!--        android:gravity="left"-->
+<!--        android:layout_gravity="left"/>-->
     <item
         android:id="@+id/compose"
         android:icon="@drawable/compose"
